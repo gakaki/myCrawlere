@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ccd1378-d8b8-4563-bf10-c61f26b0e281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crountine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcodecn/leetcode.schema" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcodecn/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mgstage/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requestPractise.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/json/all.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/json/all_chs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/jsontomodel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/leetcode.schema" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/satiger/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/json/all.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/json/all_chs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/jsontomodel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/leetcode.schema" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanlibs/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myCrawler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cspiration/leetcode.schema" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cspiration/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_cspiration.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_salttiger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_scanlibs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/go_build_myCrawler__1_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgstage.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgstage.schema" beforeDir="false" afterPath="$PROJECT_DIR$/mgstage.schema" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/satiger/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/satiger/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/satiger/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanlibs/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanlibs/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/scanlibs/model.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +42,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="configurable..is.expanded" value="false" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -74,17 +67,24 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/utils" />
       <recent name="$PROJECT_DIR$/mgstage" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build myCrawler">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="myCrawler" />
       <working_directory value="$PROJECT_DIR$" />
+      <envs>
+        <env name="http_proxy" value="http://127.0.0.1:7890" />
+      </envs>
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leetcodecn/main.go" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="myCrawler" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
@@ -105,32 +105,16 @@
       <module name="myCrawler" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/crountine.go" />
+      <filePath value="$PROJECT_DIR$/main_cspiration.go" />
       <package value="myCrawler" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build myCrawler/leetcodecn" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="myCrawler" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/leetcodecn/main.go" />
-      <package value="myCrawler/leetcodecn" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Go Build.go build myCrawler (1)" />
-      <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="Go Build.go build myCrawler" />
-      <item itemvalue="Go Build.go build myCrawler/leetcodecn" />
-      <item itemvalue="Go Build.go build main.go (1)" />
-    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build myCrawler" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build myCrawler/leetcodecn" />
-        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -142,9 +126,36 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>262</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>261</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>94</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main_cspiration.go</url>
+          <line>174</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
-        <watch expression="v" />
+        <watch expression="questionMaps" />
+        <watch expression="question400" />
+        <watch expression="question250" />
+        <watch expression="questionDS" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,148 +1,39 @@
-package main
+package Satiger
 
-type QuestionJSON struct {
-	UserName        string `json:"user_name"`
-	NumSolved       int    `json:"num_solved"`
-	NumTotal        int    `json:"num_total"`
-	AcEasy          int    `json:"ac_easy"`
-	AcMedium        int    `json:"ac_medium"`
-	AcHard          int    `json:"ac_hard"`
-	StatStatusPairs []struct {
-		Stat struct {
-			QuestionID          int    `json:"question_id"`
-			QuestionTitle       string `json:"question__title"`
-			QuestionTitleSlug   string `json:"question__title_slug"`
-			QuestionHide        bool   `json:"question__hide"`
-			TotalAcs            int    `json:"total_acs"`
-			TotalSubmitted      int    `json:"total_submitted"`
-			TotalColumnArticles int    `json:"total_column_articles"`
-			FrontendQuestionID  string `json:"frontend_question_id"`
-			IsNewQuestion       bool   `json:"is_new_question"`
-		} `json:"stat"`
-		Status     interface{} `json:"status"`
-		Difficulty struct {
-			Level int `json:"level"`
-		} `json:"difficulty"`
-		PaidOnly  bool `json:"paid_only"`
-		IsFavor   bool `json:"is_favor"`
-		Frequency int  `json:"frequency"`
-		Progress  int  `json:"progress"`
-	} `json:"stat_status_pairs"`
-	FrequencyHigh int    `json:"frequency_high"`
-	FrequencyMid  int    `json:"frequency_mid"`
-	CategorySlug  string `json:"category_slug"`
+//{
+//"id": "1",
+//"url": "https://scanlibs.com/mastering-opencv-python-practical-processing/",
+//"yearmonth": "2020年十二月",
+//"title": "Accelerating Cloud Adoption",
+//"thumbnil": "",
+//"pubDate": "2019",
+//"officalUrl": "2019",
+//"officalPress": "orreilly",
+//"baiduUrl": "orreilly",
+//"baiduCode": "orreilly",
+//"description": "balabala",
+//"createdAt": "balabala",
+//"tags": [
+//"books"
+//]
+//}
+type Tag struct {
+	Name      string  `json:"name"`
+	URL       string   `json:"url"`
 }
-
-type QuestionCHNJSON struct {
-	Data struct {
-		Translations []struct {
-			QuestionID string `json:"questionId"`
-			Title      string `json:"title"`
-			Typename   string `json:"__typename"`
-		} `json:"translations"`
-	} `json:"data"`
-}
-
-type FavoriteJSON []struct {
-	ID        string `json:"id"`
-	Name      string `json:"name"`
-	Questions []int  `json:"questions"`
-	Type      string `json:"type"`
-}
-
-type TagJSON struct {
-	Companies []interface{} `json:"companies"`
-	Topics    []struct {
-		Slug           string `json:"slug"`
-		Name           string `json:"name"`
-		Questions      []int  `json:"questions"`
-		TranslatedName string `json:"translatedName"`
-	} `json:"topics"`
-}
-
-type CompanyJSON struct {
-	Data struct {
-		InterviewHotCards []struct {
-			ID           string `json:"id"`
-			NumQuestions int    `json:"numQuestions"`
-			Company      struct {
-				Name     string `json:"name"`
-				Slug     string `json:"slug"`
-				ImgURL   string `json:"imgUrl"`
-				Typename string `json:"__typename"`
-			} `json:"company"`
-			Typename string `json:"__typename"`
-		} `json:"interviewHotCards"`
-	} `json:"data"`
-}
-
-type CompanyQuestionJSON struct {
-	Data struct {
-		InterviewCard struct {
-			ID                 string      `json:"id"`
-			IsFavorite         bool        `json:"isFavorite"`
-			IsPremiumOnly      bool        `json:"isPremiumOnly"`
-			PrivilegeExpiresAt interface{} `json:"privilegeExpiresAt"`
-			JobsCompany        struct {
-				Name                  string        `json:"name"`
-				JobPostingNum         int           `json:"jobPostingNum"`
-				IsVerified            bool          `json:"isVerified"`
-				Description           string        `json:"description"`
-				Logo                  string        `json:"logo"`
-				LogoPath              string        `json:"logoPath"`
-				PostingTypeCounts     []interface{} `json:"postingTypeCounts"`
-				IndustryDisplay       string        `json:"industryDisplay"`
-				ScaleDisplay          string        `json:"scaleDisplay"`
-				FinancingStageDisplay string        `json:"financingStageDisplay"`
-				Website               string        `json:"website"`
-				LegalName             string        `json:"legalName"`
-				Typename              string        `json:"__typename"`
-			} `json:"jobsCompany"`
-			Typename string `json:"__typename"`
-		} `json:"interviewCard"`
-		InterviewCompanyOptions []struct {
-			ID       int    `json:"id"`
-			Typename string `json:"__typename"`
-		} `json:"interviewCompanyOptions"`
-		CompanyTag struct {
-			Name           string      `json:"name"`
-			ID             string      `json:"id"`
-			ImgURL         string      `json:"imgUrl"`
-			TranslatedName interface{} `json:"translatedName"`
-			Frequencies    string      `json:"frequencies"`
-			Questions      []struct {
-				QuestionID          string      `json:"questionId"`
-				TitleSlug           string      `json:"titleSlug"`
-				QuestionFrontendID  string      `json:"questionFrontendId"`
-				Status              interface{} `json:"status"`
-				Title               string      `json:"title"`
-				TranslatedTitle     string      `json:"translatedTitle"`
-				Difficulty          string      `json:"difficulty"`
-				Stats               string      `json:"stats"`
-				IsPaidOnly          bool        `json:"isPaidOnly"`
-				FrequencyTimePeriod interface{} `json:"frequencyTimePeriod"`
-				TopicTags           []struct {
-					ID             string `json:"id"`
-					Name           string `json:"name"`
-					TranslatedName string `json:"translatedName"`
-					Slug           string `json:"slug"`
-					Typename       string `json:"__typename"`
-				} `json:"topicTags"`
-				Typename string `json:"__typename"`
-			} `json:"questions"`
-			Typename string `json:"__typename"`
-		} `json:"companyTag"`
-		JobsCompany struct {
-			Name                  string `json:"name"`
-			LegalName             string `json:"legalName"`
-			Logo                  string `json:"logo"`
-			Description           string `json:"description"`
-			Website               string `json:"website"`
-			IndustryDisplay       string `json:"industryDisplay"`
-			ScaleDisplay          string `json:"scaleDisplay"`
-			FinancingStageDisplay string `json:"financingStageDisplay"`
-			IsVerified            bool   `json:"isVerified"`
-			Typename              string `json:"__typename"`
-		} `json:"jobsCompany"`
-	} `json:"data"`
+type SatigerItem struct {
+	ID           string   `json:"id"`
+	URL          string   `json:"url"`
+	Yearmonth    string   `json:"yearmonth"`
+	Title        string   `json:"title"`
+	Thumbnil     string   `json:"thumbnil"`
+	PubDate      string   `json:"pubDate"`
+	OfficalURL   string   `json:"officalUrl"`
+	OfficalPress string   `json:"officalPress"`
+	BaiduURL     string   `json:"baiduUrl"`
+	OtherLinks   []string `json:"otherLinks"`
+	BaiduCode    string   `json:"baiduCode"`
+	Description  string   `json:"description"`
+	CreatedAt    string   `json:"createdAt"`
+	Tags         []Tag `json:"tags"`
 }

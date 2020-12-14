@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"log"
 	"myCrawler/mgstage"
+	"myCrawler/utils"
 	"os"
 	"strings"
 	"sync"
@@ -31,7 +32,7 @@ func getMgstageTodayURl() string{
 	return fmt.Sprintf(url,yyyymmdd,yyyymmdd)
 }
 func getTimeYYYYMMDD() string{
-	t := time.Now()
+	t := time.Now()//.Add(-3600*24*time.Second)
 	return fmt.Sprintf("%d.%02d.%02d",
 		t.Year(), t.Month(), t.Day())
 }
@@ -154,7 +155,7 @@ func DetailPageToImagesVideo(){
 			fmt.Println("=============")
 
 			fmt.Println("queue url  full", v.FullUrl)
-			detailDoc ,err 	:= requestGetDocument(v.FullUrl)
+			detailDoc ,err 	:= utils.RequestGetDocument(v.FullUrl)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -214,7 +215,11 @@ func GetVideoMP4(v *mgstage.Video) {
 	if err == nil {
 		//fmt.Printf("%#v \n %#v \n", err, mgstageVideo.Url)
 	}
-	v.VideoUrl = getMp4UrlFromISMURL(mgstageVideo.Url)
+	if(mgstageVideo.Url!=""){
+		v.VideoUrl = getMp4UrlFromISMURL(mgstageVideo.Url)
+	}else{
+		fmt.Println("mgstage Video url 为空",v.FullUrl)
+	}
 }
 
 type JSONMgstageVideo struct {
@@ -305,41 +310,6 @@ func getVideoModel(v *mgstage.Video,detailDoc *goquery.Document) (*mgstage.Video
  	return v, nil
 }
 
-func requestGetDocument( url string ) (*goquery.Document, error)  {
-	timeout := time.Duration(5 * time.Second)
-	client := &http.Client{
-		Timeout:timeout,
-	}
-	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Add("Cookie", "coc=1; PHPSESSID=q62v530bnrtfsqcfmnj2beuhp0; uuid=33e76d09fc86e676de2e0e8b887c8ee5; adc=1; __ulfpc=202012061038023125; _ga=GA1.2.98736236.1607222284; _gid=GA1.2.293888026.1607222284; bWdzdGFnZS5jb20%3D-_lr_uf_-r2icil=962de34a-89e7-413c-81cb-4d47111a2ac7; _gat_UA-58252858-1=1; _gat_UA-158726521-1=1; bWdzdGFnZS5jb20%3D-_lr_hb_-r2icil%2Fmgs={%22heartbeat%22:1607224305081}; bWdzdGFnZS5jb20%3D-_lr_tabs_-r2icil%2Fmgs={%22sessionID%22:0%2C%22recordingID%22:%224-e33ab609-ebc7-4322-a136-500d9641fe5f%22%2C%22lastActivity%22:1607224310786}//Cache-Control: no-cache; PHPSESSID=97n84d8jcorg6t45epdvbjvl02; uuid=33e76d09fc86e676de2e0e8b887c8ee5")
-	resp, err := client.Do(req)
-	if err != nil {
-		fmt.Println("error", err)
-		return nil,err
-	}
-	//函数结束后关闭相关链接
-	defer resp.Body.Close()
-	if resp.StatusCode == http.StatusOK {
-		bodyBytes, err := ioutil.ReadAll(resp.Body)
-		if err != nil {
-			log.Fatal(err)
-		}
-		bodyString := string(bodyBytes)
-		//doc, err := goquery.NewDocumentFromReader(resp.Body)
-		doc, err := goquery.NewDocumentFromReader(strings.NewReader(bodyString))
-		if err != nil {
-			fmt.Println("error", err)
-			log.Fatal(err)
-			return nil,err
-		}
-		return doc,nil
-	} else {
-		fmt.Println("错误号码:")
-		fmt.Println(resp.StatusCode)
-		panic(fmt.Sprintf("status code is %2d", resp.StatusCode))
-		return nil,err
-	}
-}
 func getVideoUrl(ele *goquery.Selection) (string, bool) {
 	return ele.Find("a").Eq(0).Attr("href")
 }

@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ccd1378-d8b8-4563-bf10-c61f26b0e281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cspiration/leetcode.schema" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cspiration/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_cspiration.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_salttiger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_scanlibs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/utils.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/go_build_myCrawler__1_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_leetcode.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/satiger/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/satiger/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/satiger/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanlibs/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanlibs/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/scanlibs/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/json/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcodeCN/json/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/json/all_chs.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcodeCN/json/all_chs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/jsontomodel.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcodeCN/jsontomodel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/leetcode.schema" beforeDir="false" afterPath="$PROJECT_DIR$/leetcodeCN/leetcode.schema" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcodecn/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcodeCN/model.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,19 +71,7 @@
       <recent name="$PROJECT_DIR$/mgstage" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build myCrawler">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="myCrawler" />
-      <working_directory value="$PROJECT_DIR$" />
-      <envs>
-        <env name="http_proxy" value="http://127.0.0.1:7890" />
-      </envs>
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="myCrawler" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="myCrawler" />
       <working_directory value="$PROJECT_DIR$" />
@@ -105,16 +88,25 @@
       <module name="myCrawler" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main_cspiration.go" />
+      <filePath value="$PROJECT_DIR$/main_leetcode.go" />
       <package value="myCrawler" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build myCrawler/leetcodecn" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myCrawler" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leetcodecn/main.go" />
+      <package value="myCrawler/leetcodecn" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build myCrawler" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build myCrawler/leetcodecn" />
       </list>
     </recent_temporary>
   </component>
@@ -145,8 +137,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/main_cspiration.go</url>
-          <line>174</line>
+          <line>175</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>135</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>134</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>40</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>41</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>183</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcodeCN/main.go</url>
+          <line>181</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
